@@ -1,0 +1,227 @@
+/* Genel Ayarlar ve Fontlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    background-color: #fffcfc; /* Arka plan: Çok açık, kırık beyaz/pembe */
+    color: #5d5d5d; /* Yazılar: Yumuşak koyu gri */
+}
+
+/* --- SOL MENÜ (SIDEBAR) --- */
+.sidebar {
+    width: 280px;
+    height: 100vh;
+    /* Soft Nude/Pembe Degrade Arka Plan */
+    background: linear-gradient(180deg, #eddcd9, #f4acb7); 
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-shadow: 2px 0 15px rgba(216, 131, 148, 0.2); /* Hafif pembe gölge */
+    z-index: 1000;
+}
+
+.profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #ffffff; 
+    margin-bottom: 15px;
+    object-fit: cover;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.profile h1 {
+    font-size: 1.4rem;
+    color: #5d4037; /* Koyu Kahve tonu */
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.profile p {
+    font-size: 0.9rem;
+    color: #795548; 
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Menü Linkleri */
+nav ul {
+    list-style: none;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 15px 0;
+}
+
+nav ul li a {
+    color: #4e342e;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+nav ul li a:hover {
+    color: #ffffff; /* Üzerine gelince beyaz olsun */
+    transform: translateX(5px); 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.footer-social {
+    margin-top: auto;
+}
+
+.footer-social a {
+    color: #5d4037;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffffff;
+}
+
+/* --- ANA İÇERİK ALANI --- */
+.content {
+    margin-left: 280px; 
+    padding: 60px;
+    width: 100%;
+}
+
+section {
+    margin-bottom: 80px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Başlıklar (H2) - Soft Gül Kurusu Rengi */
+h2 {
+    font-size: 2.5rem;
+    color: #d88394; 
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f2d7d5; /* Alt çizgi çok açık pembe */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* --- KART TASARIMLARI (Eğitim, Deneyim, Projeler) --- */
+.card, .project-card {
+    background-color: #ffffff; /* Kartlar Beyaz */
+    padding: 25px;
+    border-radius: 15px; /* Daha yuvarlak köşeler */
+    margin-bottom: 20px;
+    border-left: 5px solid #d88394; /* Sol taraf gül kurusu çizgi */
+    box-shadow: 0 5px 20px rgba(234, 203, 210, 0.4); /* Yumuşak pembe gölge */
+    transition: transform 0.3s;
+}
+
+.card:hover, .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(216, 131, 148, 0.3);
+}
+
+.card h3, .project-card h3 {
+    color: #5d4037;
+    margin-bottom: 5px;
+}
+
+.date {
+    color: #d88394; /* Tarihler gül kurusu */
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- YETENEK ETİKETLERİ (SKILLS) --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill-tag {
+    background: #f8e1e7; /* Çok açık pembe arka plan */
+    color: #885053; /* Koyu gül kurusu yazı */
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 500;
+    border: 1px solid #eecdd5;
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    background: #d88394;
+    color: #fff;
+}
+
+/* --- BUTONLAR --- */
+.btn-small {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #d88394;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-small:hover {
+    background-color: #c06c7d;
+}
+
+/* --- İLETİŞİM KISMI --- */
+.contact-info p {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #666;
+}
+
+.contact-info i {
+    color: #d88394; /* İkonlar gül kurusu */
+    font-size: 1.2rem;
+}
+
+/* Animasyon */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        background: linear-gradient(90deg, #eddcd9, #f4acb7);
+    }
+    .content {
+        margin-left: 0;
+        padding: 30px 20px;
+    }
+}
