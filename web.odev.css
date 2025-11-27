@@ -1,4 +1,4 @@
-/* Genel Ayarlar ve Fontlar */
+/* General Reset and Font Settings */
 * {
     margin: 0;
     padding: 0;
@@ -8,53 +8,51 @@
 }
 
 body {
-    display: flex;
-    background-color: #fffcfc; /* Arka plan: Çok açık, kırık beyaz/pembe */
-    color: #5d5d5d; /* Yazılar: Yumuşak koyu gri */
+    display: flex; /* Flexbox for Sidebar layout */
+    background-color: #1a1a2e; /* Dark creative background */
+    color: #e0e0e0;
 }
 
-/* --- SOL MENÜ (SIDEBAR) --- */
+/* Sidebar Styling */
 .sidebar {
     width: 280px;
-    height: 100vh;
-    /* Soft Nude/Pembe Degrade Arka Plan */
-    background: linear-gradient(180deg, #eddcd9, #f4acb7); 
-    position: fixed;
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(180deg, #16213e, #0f3460);
+    position: fixed; /* Fixed position on the left */
     top: 0;
     left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
-    box-shadow: 2px 0 15px rgba(216, 131, 148, 0.2); /* Hafif pembe gölge */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
     z-index: 1000;
 }
 
 .profile img {
     width: 120px;
     height: 120px;
-    border-radius: 50%;
-    border: 5px solid #ffffff; 
+    border-radius: 50%; /* Circular Image */
+    border: 4px solid #e94560;
     margin-bottom: 15px;
     object-fit: cover;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .profile h1 {
     font-size: 1.4rem;
-    color: #5d4037; /* Koyu Kahve tonu */
+    color: #fff;
     margin-bottom: 5px;
     text-align: center;
 }
 
 .profile p {
     font-size: 0.9rem;
-    color: #795548; 
+    color: #a0a0a0;
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Menü Linkleri */
+/* Navigation Links */
 nav ul {
     list-style: none;
     width: 100%;
@@ -65,40 +63,39 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #4e342e;
+    color: #e0e0e0;
     text-decoration: none;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 10px;
     transition: 0.3s;
-    font-weight: 500;
 }
 
 nav ul li a:hover {
-    color: #ffffff; /* Üzerine gelince beyaz olsun */
-    transform: translateX(5px); 
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    color: #e94560; /* Highlight color on hover */
+    transform: translateX(10px); /* Slide effect */
 }
 
+/* Social Icons in Footer */
 .footer-social {
     margin-top: auto;
 }
 
 .footer-social a {
-    color: #5d4037;
+    color: #fff;
     font-size: 1.5rem;
     margin: 0 10px;
     transition: 0.3s;
 }
 
 .footer-social a:hover {
-    color: #ffffff;
+    color: #e94560;
 }
 
-/* --- ANA İÇERİK ALANI --- */
+/* Main Content Styling */
 .content {
-    margin-left: 280px; 
+    margin-left: 280px; /* Offset for sidebar */
     padding: 60px;
     width: 100%;
 }
@@ -108,12 +105,11 @@ section {
     animation: fadeIn 1s ease-in-out;
 }
 
-/* Başlıklar (H2) - Soft Gül Kurusu Rengi */
 h2 {
     font-size: 2.5rem;
-    color: #d88394; 
+    color: #e94560;
     margin-bottom: 30px;
-    border-bottom: 2px solid #f2d7d5; /* Alt çizgi çok açık pembe */
+    border-bottom: 2px solid #e94560;
     display: inline-block;
     padding-bottom: 10px;
 }
@@ -121,39 +117,30 @@ h2 {
 p {
     line-height: 1.8;
     margin-bottom: 15px;
-    color: #666;
 }
 
-/* --- KART TASARIMLARI (Eğitim, Deneyim, Projeler) --- */
+/* Cards (Education & Projects) */
 .card, .project-card {
-    background-color: #ffffff; /* Kartlar Beyaz */
+    background-color: #16213e;
     padding: 25px;
-    border-radius: 15px; /* Daha yuvarlak köşeler */
+    border-radius: 10px;
     margin-bottom: 20px;
-    border-left: 5px solid #d88394; /* Sol taraf gül kurusu çizgi */
-    box-shadow: 0 5px 20px rgba(234, 203, 210, 0.4); /* Yumuşak pembe gölge */
+    border-left: 5px solid #e94560; /* Creative accent border */
     transition: transform 0.3s;
 }
 
 .card:hover, .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(216, 131, 148, 0.3);
-}
-
-.card h3, .project-card h3 {
-    color: #5d4037;
-    margin-bottom: 5px;
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
 .date {
-    color: #d88394; /* Tarihler gül kurusu */
-    font-weight: 600;
+    color: #e94560;
+    font-weight: bold;
     font-size: 0.9rem;
-    margin-bottom: 10px;
-    display: block;
 }
 
-/* --- YETENEK ETİKETLERİ (SKILLS) --- */
+/* Skill Tags */
 .skills-grid {
     display: flex;
     flex-wrap: wrap;
@@ -161,67 +148,54 @@ p {
 }
 
 .skill-tag {
-    background: #f8e1e7; /* Çok açık pembe arka plan */
-    color: #885053; /* Koyu gül kurusu yazı */
-    padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: 500;
-    border: 1px solid #eecdd5;
-    transition: 0.3s;
-}
-
-.skill-tag:hover {
-    background: #d88394;
-    color: #fff;
-}
-
-/* --- BUTONLAR --- */
-.btn-small {
-    display: inline-block;
-    margin-top: 15px;
-    background-color: #d88394;
+    background: #0f3460;
     color: #fff;
     padding: 10px 20px;
     border-radius: 20px;
+    font-weight: 600;
+    border: 1px solid #e94560;
+}
+
+/* Buttons */
+.btn-small {
+    display: inline-block;
+    margin-top: 10px;
+    color: #e94560;
     text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
+    font-weight: bold;
 }
 
 .btn-small:hover {
-    background-color: #c06c7d;
+    text-decoration: underline;
 }
 
-/* --- İLETİŞİM KISMI --- */
+/* Contact Info */
 .contact-info p {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
     gap: 15px;
-    color: #666;
 }
 
 .contact-info i {
-    color: #d88394; /* İkonlar gül kurusu */
-    font-size: 1.2rem;
+    color: #e94560;
 }
 
-/* Animasyon */
+/* Simple Fade In Animation */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Mobil Uyumluluk */
+/* Responsive Design for Mobile */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
         height: auto;
         position: relative;
-        background: linear-gradient(90deg, #eddcd9, #f4acb7);
     }
     .content {
         margin-left: 0;
-        padding: 30px 20px;
+        padding: 20px;
     }
 }
